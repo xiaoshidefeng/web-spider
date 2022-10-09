@@ -1,0 +1,27 @@
+{
+  "name": "web-spider",
+  "version": "1.0.0",
+  "description": "\"# web-spider\"",
+  "main": "temp.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "winston": "^3.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoshidefeng/web-spider.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaoshidefeng/web-spider/issues"
+  },
+  "homepage": "https://github.com/xiaoshidefeng/web-spider#readme"
+}
