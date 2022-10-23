@@ -10,18 +10,10 @@ function initLogPath(path) {
     logPath = path;
 }
 
-function writeInfoLog(msg) {
-    fs.appendFileSync(logPath, getFormatTime() + " INFO: " + msg + '\n');
-}
-
-function writeErrorLog(errorMsg, error) {
-    fs.appendFileSync(logPath, getFormatTime() + "ERROR: " + errorMsg + error + '\n');
-}
-
 function getFormatTime() {
     const timestamp = Math.floor(Date.now() / 1000);
     const date = new Date(parseInt(timestamp) * 1000);
-    let y = date.getMonth() + 1;
+    const y = date.getMonth() + 1;
     let MM = date.getMonth() + 1;
     MM = MM < 10 ? ('0' + MM) : MM;
     let d = date.getDate();
@@ -35,5 +27,16 @@ function getFormatTime() {
     return y + '-' + MM + '-' + d + ' ' + h + ':' + m + ':' + s;
 }
 
+function writeInfoLog(msg) {
+    fs.appendFileSync(logPath, getFormatTime() + 'INFO:' + msg + '\n');
+}
 
-export { initLogPath, writeErrorLog, writeInfoLog };
+function writeErrorLog(errorMsg, error) {
+    fs.appendFileSync(logPath, getFormatTime() + 'ERROR: ' + errorMsg + error + '\n');
+}
+
+export {
+    initLogPath,
+    writeErrorLog,
+    writeInfoLog
+};
