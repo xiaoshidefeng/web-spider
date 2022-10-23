@@ -1,0 +1,9 @@
+{
+    "feedfile": "./input.txt",
+    "result": "./output/result.txt",
+    "max_depth": 2,
+    "crawl_interval": 3,
+    "crawl_timeout": 6,
+    "thread_count": 3,
+    "log_path": "./output/log.txt"
+}
